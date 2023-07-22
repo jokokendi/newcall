@@ -41,7 +41,7 @@ class SetupHelper:
                 shutil.rmtree(
                     os.path.join(
                         self._folder_package,
-                        'pytgcalls', 'node_modules',
+                        'newcalls', 'node_modules',
                     ),
                 )
             except OSError:
@@ -49,7 +49,7 @@ class SetupHelper:
             try:
                 shutil.rmtree(
                     os.path.join(
-                        self._folder_package, 'pytgcalls', 'dist',
+                        self._folder_package, 'newcalls', 'dist',
                     ),
                 ),
             except OSError:
@@ -87,11 +87,11 @@ class SetupHelper:
             )
             shutil.copytree(
                 os.path.join(self._tmp_dir, 'node_modules'),
-                os.path.join(self._ext_dir, 'pytgcalls', 'node_modules'),
+                os.path.join(self._ext_dir, 'newcalls', 'node_modules'),
             )
             shutil.copytree(
                 os.path.join(self._tmp_dir, 'dist'),
-                os.path.join(self._ext_dir, 'pytgcalls', 'dist'),
+                os.path.join(self._ext_dir, 'newcalls', 'dist'),
             )
 
 
@@ -118,13 +118,13 @@ with open(os.path.join(base_path, 'README.md'), encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name='py-tgcalls',
-    version='0.9.7',
+    name='newcalls',
+    version='0.0.1',
     long_description=readme,
     long_description_content_type='text/markdown',
-    url='https://github.com/pytgcalls/pytgcalls',
-    author='Laky-64',
-    author_email='iraci.matteo@gmail.com',
+    url='https://github.com/jokokendi/newcalls',
+    author='jokokendi',
+    author_email='ajual7832@gmail.com',
     license='LGPL-3.0',
     license_file='LICENSE',
     classifiers=[
@@ -140,7 +140,7 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
-    ext_modules=[NodeJsExtension('pytgcalls')],
+    ext_modules=[NodeJsExtension('newcalls')],
     packages=find_packages(),
     install_requires=[
         'aiohttp',
