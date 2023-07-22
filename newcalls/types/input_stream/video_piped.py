@@ -18,19 +18,19 @@ class VideoPiped(InputStream):
             Lip Sync mode
         raw_headers (``str``):
             Headers of http the connection
-        stream_audio (:obj:`~pytgcalls.types.InputAudioStream()`):
+        stream_audio (:obj:`~newcalls.types.InputAudioStream()`):
             Input Audio Stream Descriptor
-        stream_video (:obj:`~pytgcalls.types.InputVideoStream()`):
+        stream_video (:obj:`~newcalls.types.InputVideoStream()`):
             Input Video Stream Descriptor
 
     Parameters:
         path (``str``):
             The video file path
-        video_parameters (:obj:`~pytgcalls.types.VideoParameters()`):
+        video_parameters (:obj:`~newcalls.types.VideoParameters()`):
             The video parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityVideo()`,
-            :obj:`~pytgcalls.types.MediumQualityVideo()` or
-            :obj:`~pytgcalls.types.LowQualityVideo()`
+            :obj:`~newcalls.types.HighQualityVideo()`,
+            :obj:`~newcalls.types.MediumQualityVideo()` or
+            :obj:`~newcalls.types.LowQualityVideo()`
         headers (``Dict[str, str]``, **optional**):
             Headers of http the connection
         additional_ffmpeg_parameters (``str``, **optional**):

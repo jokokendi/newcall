@@ -16,10 +16,10 @@ class OnGroupCallInvite(Scaffold):
                 :emphasize-lines: 4-5
 
                 ...
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 ...
                 @app.on_group_call_invite()
-                async def handler(client: PyTgCalls, service_msg):
+                async def handler(client: NewCalls, service_msg):
                     print(service_msg)
                 ...
                 app.run()

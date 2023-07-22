@@ -67,14 +67,14 @@ class CustomApi:
         """Start the Custom Api.
 
         This method start the internal http webserver,
-        this is helpful if you need an API interface to PyTgCalls.
+        this is helpful if you need an API interface to NewCalls.
 
         Example:
             .. code-block:: python
                 :emphasize-lines: 5
 
-                from pytgcalls import CustomApi
-                from pytgcalls import idle
+                from newcalls import CustomApi
+                from newcalls import idle
 
                 webserver = CustomApi()
                 webserver.start()

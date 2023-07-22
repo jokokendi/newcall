@@ -15,9 +15,9 @@ class MtProtoClient:
         client: Any,
     ):
         self._bind_client: Optional[BridgedClient] = None
-        if client.__class__.__module__ == 'pyrogram.client':
-            from .pyrogram_client import PyrogramClient
-            self._bind_client = PyrogramClient(
+        if client.__class__.__module__ == 'newgram.client':
+            from .newgram_client import NewgramClient
+            self._bind_client = NewgramClient(
                 cache_duration,
                 client,
             )
@@ -33,8 +33,8 @@ class MtProtoClient:
     @property
     def client(self):
         client_name = self._bind_client.__class__.__name__
-        if client_name == 'PyrogramClient':
-            return 'pyrogram'
+        if client_name == 'NewgramClient':
+            return 'newgram'
         elif client_name == 'TelethonClient':
             return 'telethon'
         else:

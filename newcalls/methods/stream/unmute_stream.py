@@ -29,7 +29,7 @@ class UnMuteStream(Scaffold):
                 to call this method without any MtProto client
             NodeJSNotRunning: In case you try
                 to call this method without do
-                :meth:`~pytgcalls.PyTgCalls.start` before
+                :meth:`~newcalls.NewCalls.start` before
             NotInGroupCallError: In case you try
                 to leave a non-joined group call
 
@@ -37,11 +37,11 @@ class UnMuteStream(Scaffold):
             .. code-block:: python
                 :emphasize-lines: 10-12
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
 
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 app.start()
 
                 ...  # Call API methods

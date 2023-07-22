@@ -6,9 +6,9 @@ RUN \
   curl -fsSL https://deb.nodesource.com/setup_current.x | bash - &&\
   apt-get update && \
   apt-get install -y nodejs
-WORKDIR /usr/src/pytgcalls
-WORKDIR pytgcalls/
-COPY pytgcalls/ .
+WORKDIR /usr/src/newcalls
+WORKDIR newcalls/
+COPY newcalls/ .
 WORKDIR ../src/
 COPY src/* .
 WORKDIR ..
@@ -25,4 +25,4 @@ RUN python${python_version} setup.py sdist bdist_wheel --plat-name ${pname}
 WORKDIR /usr/src/installer
 COPY platforms/linux/linux_mount.sh /usr/src/installer
 RUN chmod +x /usr/src/installer/linux_mount.sh
-VOLUME ['/usr/src/installer', '/usr/src/pytgcalls']
+VOLUME ['/usr/src/installer', '/usr/src/newcalls']

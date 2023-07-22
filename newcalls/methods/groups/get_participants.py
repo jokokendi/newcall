@@ -22,18 +22,18 @@ class GetParticipants(Scaffold):
                 Can be a direct id (int) or a username (str)
 
         Returns:
-            List of :obj:`~pytgcalls.types.GroupCallParticipant()`:
+            List of :obj:`~newcalls.types.GroupCallParticipant()`:
             On success, a list of participants is returned
 
         Example:
             .. code-block:: python
                 :emphasize-lines: 10-12
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
 
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 app.start()
 
                 ...  # Call API methods

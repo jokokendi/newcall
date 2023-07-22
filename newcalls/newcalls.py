@@ -12,14 +12,14 @@ from .types.call_holder import CallHolder
 from .types.update_solver import UpdateSolver
 
 
-class PyTgCalls(Methods, Scaffold):
-    """PyTgCalls Client, the main means
+class NewCalls(Methods, Scaffold):
+    """NewCalls Client, the main means
     for interacting with Group Calls.
 
     Attributes:
-        active_calls (List of :obj:`~pytgcalls.types.GroupCall`):
+        active_calls (List of :obj:`~newcalls.types.GroupCall`):
             Get a list of active (Playing / Paused) group calls
-        calls (List of :obj:`~pytgcalls.types.GroupCall`):
+        calls (List of :obj:`~newcalls.types.GroupCall`):
             Get a list of existent group calls
         cache_peer (`InputPeer (P)`_ | `InputPeer (T)`_):
             Get current Telegram user
@@ -57,7 +57,7 @@ class PyTgCalls(Methods, Scaffold):
         self._is_running = False
         self._env_checker = Environment(
             self._REQUIRED_NODEJS_VERSION,
-            self._REQUIRED_PYROGRAM_VERSION,
+            self._REQUIRED_NEWGRAM_VERSION,
             self._REQUIRED_TELETHON_VERSION,
             self._app.client,
         )

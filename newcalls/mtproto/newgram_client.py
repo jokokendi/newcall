@@ -4,45 +4,45 @@ from typing import Dict
 from typing import Optional
 from typing import Union
 
-import pyrogram
-from pyrogram import Client
-from pyrogram import ContinuePropagation
-from pyrogram.raw.base import InputPeer
-from pyrogram.raw.functions.channels import GetFullChannel
-from pyrogram.raw.functions.messages import GetFullChat
-from pyrogram.raw.functions.phone import EditGroupCallParticipant
-from pyrogram.raw.functions.phone import GetGroupCall
-from pyrogram.raw.functions.phone import GetGroupParticipants
-from pyrogram.raw.functions.phone import JoinGroupCall
-from pyrogram.raw.functions.phone import LeaveGroupCall
-from pyrogram.raw.types import Channel
-from pyrogram.raw.types import ChannelForbidden
-from pyrogram.raw.types import Chat
-from pyrogram.raw.types import ChatForbidden
-from pyrogram.raw.types import DataJSON
-from pyrogram.raw.types import GroupCall
-from pyrogram.raw.types import GroupCallDiscarded
-from pyrogram.raw.types import InputChannel
-from pyrogram.raw.types import InputGroupCall
-from pyrogram.raw.types import InputPeerChannel
-from pyrogram.raw.types import MessageActionChatDeleteUser
-from pyrogram.raw.types import MessageActionInviteToGroupCall
-from pyrogram.raw.types import MessageService
-from pyrogram.raw.types import PeerChat
-from pyrogram.raw.types import UpdateChannel
-from pyrogram.raw.types import UpdateGroupCall
-from pyrogram.raw.types import UpdateGroupCallConnection
-from pyrogram.raw.types import UpdateGroupCallParticipants
-from pyrogram.raw.types import UpdateNewChannelMessage
-from pyrogram.raw.types import UpdateNewMessage
-from pyrogram.raw.types import Updates
+import newgram
+from newgram import Client
+from newgram import ContinuePropagation
+from newgram.raw.base import InputPeer
+from newgram.raw.functions.channels import GetFullChannel
+from newgram.raw.functions.messages import GetFullChat
+from newgram.raw.functions.phone import EditGroupCallParticipant
+from newgram.raw.functions.phone import GetGroupCall
+from newgram.raw.functions.phone import GetGroupParticipants
+from newgram.raw.functions.phone import JoinGroupCall
+from newgram.raw.functions.phone import LeaveGroupCall
+from newgram.raw.types import Channel
+from newgram.raw.types import ChannelForbidden
+from newgram.raw.types import Chat
+from newgram.raw.types import ChatForbidden
+from newgram.raw.types import DataJSON
+from newgram.raw.types import GroupCall
+from newgram.raw.types import GroupCallDiscarded
+from newgram.raw.types import InputChannel
+from newgram.raw.types import InputGroupCall
+from newgram.raw.types import InputPeerChannel
+from newgram.raw.types import MessageActionChatDeleteUser
+from newgram.raw.types import MessageActionInviteToGroupCall
+from newgram.raw.types import MessageService
+from newgram.raw.types import PeerChat
+from newgram.raw.types import UpdateChannel
+from newgram.raw.types import UpdateGroupCall
+from newgram.raw.types import UpdateGroupCallConnection
+from newgram.raw.types import UpdateGroupCallParticipants
+from newgram.raw.types import UpdateNewChannelMessage
+from newgram.raw.types import UpdateNewMessage
+from newgram.raw.types import Updates
 
 from ..version_manager import VersionManager
 from .bridged_client import BridgedClient
 from .client_cache import ClientCache
 
 
-class PyrogramClient(BridgedClient):
+class NewgramClient(BridgedClient):
     def __init__(
         self,
         cache_duration: int,
@@ -50,7 +50,7 @@ class PyrogramClient(BridgedClient):
     ):
         self._app: Client = client
         if VersionManager.version_tuple(
-            pyrogram.__version__,
+            newgram.__version__,
         ) > VersionManager.version_tuple(
             '2.0.0',
         ):

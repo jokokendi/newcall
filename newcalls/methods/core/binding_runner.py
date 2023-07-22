@@ -1,6 +1,6 @@
 import asyncio
 
-from ...pytgcalls_session import PyTgCallsSession
+from ...NewCalls_session import NewCallsSession
 from ...scaffold import Scaffold
 
 
@@ -34,7 +34,7 @@ class BindingRunner(Scaffold):
 
             pass
 
-        await PyTgCallsSession().start()
+        await NewCallsSession().start()
         loop = asyncio.get_event_loop()
         started_core = loop.create_future()
         self._async_core = asyncio.ensure_future(

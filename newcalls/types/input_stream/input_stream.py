@@ -11,15 +11,15 @@ class InputStream(PyObject):
     Attributes:
         lip_sync (``bool``):
             Lip Sync mode
-        stream_audio (:obj:`~pytgcalls.types.InputAudioStream()`):
+        stream_audio (:obj:`~newcalls.types.InputAudioStream()`):
             Input Audio Stream Descriptor
-        stream_video (:obj:`~pytgcalls.types.InputVideoStream()`):
+        stream_video (:obj:`~newcalls.types.InputVideoStream()`):
             Input Video Stream Descriptor
 
     Parameters:
-        stream_audio (:obj:`~pytgcalls.types.InputAudioStream()`):
+        stream_audio (:obj:`~newcalls.types.InputAudioStream()`):
             Audio File Descriptor
-        stream_video (:obj:`~pytgcalls.types.InputVideoStream()`):
+        stream_video (:obj:`~newcalls.types.InputVideoStream()`):
             Video File Descriptor
         lip_sync (``bool``, **optional**):
             Lip Sync mode

@@ -16,7 +16,7 @@ from typing import Optional
 
 from .types.session import Session
 
-py_logger = logging.getLogger('pytgcalls')
+py_logger = logging.getLogger('newcalls')
 
 
 class Binding:

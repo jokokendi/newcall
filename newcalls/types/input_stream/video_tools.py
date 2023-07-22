@@ -1,10 +1,10 @@
 from math import gcd
 
-from pytgcalls.exceptions import InvalidVideoProportion
-from pytgcalls.types.input_stream.quality import HighQualityVideo
-from pytgcalls.types.input_stream.quality import LowQualityVideo
-from pytgcalls.types.input_stream.quality import MediumQualityVideo
-from pytgcalls.types.input_stream.video_parameters import VideoParameters
+from newcalls.exceptions import InvalidVideoProportion
+from newcalls.types.input_stream.quality import HighQualityVideo
+from newcalls.types.input_stream.quality import LowQualityVideo
+from newcalls.types.input_stream.quality import MediumQualityVideo
+from newcalls.types.input_stream.video_parameters import VideoParameters
 
 
 def check_support(link: str):

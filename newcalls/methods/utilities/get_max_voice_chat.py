@@ -12,7 +12,7 @@ class GetMaxVoiceChat(Scaffold):
 
         Parameters:
             consumption (``int``, **optional**):
-                Estimated PyTgCalls consumption of Core x Single Group Call
+                Estimated NewCalls consumption of Core x Single Group Call
 
         Returns:
             ``int`` - Max number of group calls can be started
@@ -21,8 +21,8 @@ class GetMaxVoiceChat(Scaffold):
             .. code-block:: python
                 :emphasize-lines: 5
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
                 app = Client(client)
                 app.get_max_voice_chat()

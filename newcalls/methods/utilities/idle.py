@@ -7,7 +7,7 @@ from signal import signal as signal_fn
 from signal import SIGTERM
 
 
-py_logger = logging.getLogger('pytgcalls')
+py_logger = logging.getLogger('newcalls')
 
 is_idling = False
 
@@ -25,7 +25,7 @@ async def idle():
     script execution and prevent it from exiting while having client(s)
     that are still running in the background.
 
-    The way PyTgCalls works, it will keep your handlers in a pool of
+    The way NewCalls works, it will keep your handlers in a pool of
     worker threads, which are executed concurrently outside the main
     thread; calling idle() will ensure the client(s) will be kept alive
     by not letting the main script to end, until you decide to quit.
@@ -37,13 +37,13 @@ async def idle():
         .. code-block:: python
             :emphasize-lines: 15
 
-            from pytgcalls import Client
-            from pytgcalls import idle
+            from newcalls import Client
+            from newcalls import idle
             ...
 
-            app1 = PyTgCalls(client1)
-            app2 = PyTgCalls(client2)
-            app3 = PyTgCalls(client3)
+            app1 = NewCalls(client1)
+            app2 = NewCalls(client2)
+            app3 = NewCalls(client3)
 
             ...  # Set handlers up
 

@@ -30,7 +30,7 @@ from ...types.input_stream import VideoPiped
 from ...types.input_stream.audio_image_piped import AudioImagePiped
 from ...types.session import Session
 
-py_logger = logging.getLogger('pytgcalls')
+py_logger = logging.getLogger('newcalls')
 
 
 class JoinGroupCall(Scaffold):
@@ -51,18 +51,18 @@ class JoinGroupCall(Scaffold):
             chat_id (``int`` | ``str``):
                 Unique identifier of the target chat.
                 Can be a direct id (int) or a username (str)
-            stream (:obj:`~pytgcalls.types.InputStream()`):
+            stream (:obj:`~newcalls.types.InputStream()`):
                 Input Streams descriptor, can be used also
-                :obj:`~pytgcalls.types.AudioPiped()`,
-                :obj:`~pytgcalls.types.AudioImagePiped()`,
-                :obj:`~pytgcalls.types.AudioVideoPiped()` or
-                :obj:`~pytgcalls.types.VideoPiped()`
+                :obj:`~newcalls.types.AudioPiped()`,
+                :obj:`~newcalls.types.AudioImagePiped()`,
+                :obj:`~newcalls.types.AudioVideoPiped()` or
+                :obj:`~newcalls.types.VideoPiped()`
             invite_hash (``str``, **optional**):
                 Unique identifier for the invite in a group call
                 in form of a t.me link
             join_as (`InputPeer (P)`_ | `InputPeer (T)`_, **optional**):
                 InputPeer of join as channel or profile
-            stream_type (:obj:`~pytgcalls.StreamType`, **optional**)
+            stream_type (:obj:`~newcalls.StreamType`, **optional**)
                 The type of Stream
 
         Raises:
@@ -70,7 +70,7 @@ class JoinGroupCall(Scaffold):
                 to call this method without any MtProto client
             NodeJSNotRunning: In case you try
                 to call this method without do
-                :meth:`~pytgcalls.PyTgCalls.start` before
+                :meth:`~newcalls.NewCalls.start` before
             NoActiveGroupCall: In case you try
                 to edit a not started group call
             FileNotFoundError: In case you try
@@ -105,11 +105,11 @@ class JoinGroupCall(Scaffold):
             .. code-block:: python
                 :emphasize-lines: 10-15
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
 
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 app.start()
 
                 ...  # Call API methods

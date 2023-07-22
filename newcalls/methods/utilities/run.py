@@ -12,15 +12,15 @@ class Run(Scaffold):
         main script, since idle() will block after starting the own client.
 
         Raises:
-            PyTgCallsAlreadyRunning: In case you try
+            NewCallsAlreadyRunning: In case you try
                 to start an already started client.
 
         Example:
             .. code-block:: python
                 :emphasize-lines: 8
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
                 app = Client(client)
 

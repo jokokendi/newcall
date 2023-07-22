@@ -9,18 +9,18 @@ class CaptureAudioDevice(InputStream):
     """Capture video from Screen and Audio from device
 
     Attributes:
-        stream_audio (:obj:`~pytgcalls.types.InputAudioStream()`):
+        stream_audio (:obj:`~newcalls.types.InputAudioStream()`):
             Input Audio Stream Descriptor
-        stream_video (:obj:`~pytgcalls.types.InputVideoStream()`):
+        stream_video (:obj:`~newcalls.types.InputVideoStream()`):
             Input Video Stream Descriptor
     Parameters:
-        audio_info (:obj: `~pytgcalls.media_devices.DeviceInfo()`):
+        audio_info (:obj: `~newcalls.media_devices.DeviceInfo()`):
             The audio device capturing params
-        audio_parameters (:obj:`~pytgcalls.types.AudioParameters()`):
+        audio_parameters (:obj:`~newcalls.types.AudioParameters()`):
             The audio parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityAudio()`,
-            :obj:`~pytgcalls.types.MediumQualityAudio()` or
-            :obj:`~pytgcalls.types.LowQualityAudio()`
+            :obj:`~newcalls.types.HighQualityAudio()`,
+            :obj:`~newcalls.types.MediumQualityAudio()` or
+            :obj:`~newcalls.types.LowQualityAudio()`
     """
 
     def __init__(

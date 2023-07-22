@@ -10,15 +10,15 @@ from .__version__ import __version__
 from .version_manager import VersionManager
 
 
-class PyTgCallsSession:
+class NewCallsSession:
     notice_displayed = False
 
     async def start(self):
         if not self.notice_displayed:
-            PyTgCallsSession.notice_displayed = True
+            NewCallsSession.notice_displayed = True
             print(
-                f'PyTgCalls v{__version__}, Copyright (C) '
-                f'2021-2022 Laky-64 <https://github.com/Laky-64>\n'
+                f'NewCalls v{__version__}, Copyright (C) '
+                f'2021-2022 jokokendi <https://github.com/jokokendi>\n'
                 'Licensed under the terms of the GNU Lesser '
                 'General Public License v3 or later (LGPLv3+)\n',
             )
@@ -37,7 +37,7 @@ class PyTgCallsSession:
                 if VersionManager.version_tuple(remote_ver) > \
                         VersionManager.version_tuple(my_ver):
                     text = f'Update Available!\n' \
-                           f'New PyTgCalls v{remote_readable_ver} ' \
+                           f'New NewCalls v{remote_readable_ver} ' \
                            f'is now available!\n'
                     if not sys.platform.startswith('win'):
                         print(f'\033[93m{text}\033[0m')
@@ -64,8 +64,8 @@ class PyTgCallsSession:
             '__version__ = \'(.*?)\'', (
                 await get_async(
                     f'https://raw.githubusercontent.com/'
-                    f'pytgcalls/pytgcalls/{branch}'
-                    f'/pytgcalls/__version__.py',
+                    f'newcalls/newcalls/{branch}'
+                    f'/newcalls/__version__.py',
                 )
             ),
         )

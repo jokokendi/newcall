@@ -8,17 +8,17 @@ class InputAudioStream(PyObject):
     Attributes:
         path (``str``):
             The audio file path
-        parameters (:obj:`~pytgcalls.types.AudioParameters()`):
+        parameters (:obj:`~newcalls.types.AudioParameters()`):
             The audio parameters of the stream
 
     Parameters:
         path (``str``):
             The audio file path (PCM16L format only)
-        parameters (:obj:`~pytgcalls.types.AudioParameters()`):
+        parameters (:obj:`~newcalls.types.AudioParameters()`):
             The audio parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityAudio()`,
-            :obj:`~pytgcalls.types.MediumQualityAudio()` or
-            :obj:`~pytgcalls.types.LowQualityAudio()`
+            :obj:`~newcalls.types.HighQualityAudio()`,
+            :obj:`~newcalls.types.MediumQualityAudio()` or
+            :obj:`~newcalls.types.LowQualityAudio()`
     """
 
     def __init__(

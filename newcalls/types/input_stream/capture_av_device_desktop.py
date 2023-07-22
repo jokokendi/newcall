@@ -12,25 +12,25 @@ class CaptureAVDeviceDesktop(InputStream):
     """Capture video from Screen and Audio from device
 
     Attributes:
-        stream_audio (:obj:`~pytgcalls.types.InputAudioStream()`):
+        stream_audio (:obj:`~newcalls.types.InputAudioStream()`):
             Input Audio Stream Descriptor
-        stream_video (:obj:`~pytgcalls.types.InputVideoStream()`):
+        stream_video (:obj:`~newcalls.types.InputVideoStream()`):
             Input Video Stream Descriptor
     Parameters:
-        audio_info (:obj: `~pytgcalls.media_devices.DeviceInfo()`):
+        audio_info (:obj: `~newcalls.media_devices.DeviceInfo()`):
             The audio device capturing params
-        screen_info (:obj: `~pytgcalls.media_devices.ScreenManager()`):
+        screen_info (:obj: `~newcalls.media_devices.ScreenManager()`):
             The screen video capturing params
-        audio_parameters (:obj:`~pytgcalls.types.AudioParameters()`):
+        audio_parameters (:obj:`~newcalls.types.AudioParameters()`):
             The audio parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityAudio()`,
-            :obj:`~pytgcalls.types.MediumQualityAudio()` or
-            :obj:`~pytgcalls.types.LowQualityAudio()`
-        video_parameters (:obj:`~pytgcalls.types.VideoParameters()`):
+            :obj:`~newcalls.types.HighQualityAudio()`,
+            :obj:`~newcalls.types.MediumQualityAudio()` or
+            :obj:`~newcalls.types.LowQualityAudio()`
+        video_parameters (:obj:`~newcalls.types.VideoParameters()`):
             The video parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityVideo()`,
-            :obj:`~pytgcalls.types.MediumQualityVideo()` or
-            :obj:`~pytgcalls.types.LowQualityVideo()`
+            :obj:`~newcalls.types.HighQualityVideo()`,
+            :obj:`~newcalls.types.MediumQualityVideo()` or
+            :obj:`~newcalls.types.LowQualityVideo()`
     """
 
     def __init__(

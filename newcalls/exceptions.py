@@ -1,7 +1,7 @@
 class NodeJSNotInstalled(Exception):
     """Node.js isn’t installed, raised by
-    :meth:`~pytgcalls.PyTgCalls.start` or
-    :meth:`~pytgcalls.PyTgCalls.run`
+    :meth:`~newcalls.NewCalls.start` or
+    :meth:`~newcalls.NewCalls.run`
     """
 
     def __init__(
@@ -15,8 +15,8 @@ class NodeJSNotInstalled(Exception):
 
 class TooOldNodeJSVersion(Exception):
     """Node.js version is too old, raised by
-    :meth:`~pytgcalls.PyTgCalls.start` or
-    :meth:`~pytgcalls.PyTgCalls.run`
+    :meth:`~newcalls.NewCalls.start` or
+    :meth:`~newcalls.NewCalls.run`
     """
 
     def __init__(
@@ -31,28 +31,28 @@ class TooOldNodeJSVersion(Exception):
         )
 
 
-class TooOldPyrogramVersion(Exception):
-    """Pyrogram version is too old, raised by
-    :meth:`~pytgcalls.PyTgCalls.start` or
-    :meth:`~pytgcalls.PyTgCalls.run`
+class TooOldNewgramVersion(Exception):
+    """Newgram version is too old, raised by
+    :meth:`~newcalls.NewCalls.start` or
+    :meth:`~newcalls.NewCalls.run`
     """
 
     def __init__(
             self,
             version_needed: str,
-            pyrogram_version: str,
+            newgram_version: str,
     ):
         super().__init__(
-            f'Needed pyrogram {version_needed}+, '
+            f'Needed newgram {version_needed}+, '
             'actually installed is '
-            f'{pyrogram_version}',
+            f'{newgram_version}',
         )
 
 
 class TooOldTelethonVersion(Exception):
     """Telethon version is too old, raised by
-    :meth:`~pytgcalls.PyTgCalls.start` or
-    :meth:`~pytgcalls.PyTgCalls.run`
+    :meth:`~newcalls.NewCalls.start` or
+    :meth:`~newcalls.NewCalls.run`
     """
 
     def __init__(
@@ -69,8 +69,8 @@ class TooOldTelethonVersion(Exception):
 
 class InvalidStreamMode(Exception):
     """The stream mode is invalid, raised by
-    :meth:`~pytgcalls.PyTgCalls.change_stream` or
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    :meth:`~newcalls.NewCalls.change_stream` or
+    :meth:`~newcalls.NewCalls.join_group_call`
     """
 
     def __init__(self):
@@ -81,13 +81,13 @@ class InvalidStreamMode(Exception):
 
 class NoMtProtoClientSet(Exception):
     """An MtProto client not set to
-    :class:`~pytgcalls.PyTgCalls`, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.leave_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.change_volume_call`,
-    :meth:`~pytgcalls.PyTgCalls.change_stream`,
-    :meth:`~pytgcalls.PyTgCalls.pause_stream` and
-    :meth:`~pytgcalls.PyTgCalls.resume_stream`
+    :class:`~newcalls.NewCalls`, raised by
+    :meth:`~newcalls.NewCalls.join_group_call`,
+    :meth:`~newcalls.NewCalls.leave_group_call`,
+    :meth:`~newcalls.NewCalls.change_volume_call`,
+    :meth:`~newcalls.NewCalls.change_stream`,
+    :meth:`~newcalls.NewCalls.pause_stream` and
+    :meth:`~newcalls.NewCalls.resume_stream`
     """
 
     def __init__(self):
@@ -98,14 +98,14 @@ class NoMtProtoClientSet(Exception):
 
 class NodeJSNotRunning(Exception):
     """NodeJS core not running, do
-    :meth:`~pytgcalls.PyTgCalls.start`
+    :meth:`~newcalls.NewCalls.start`
     before call these methods, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.leave_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.change_volume_call`,
-    :meth:`~pytgcalls.PyTgCalls.change_stream`,
-    :meth:`~pytgcalls.PyTgCalls.pause_stream` and
-    :meth:`~pytgcalls.PyTgCalls.resume_stream`
+    :meth:`~newcalls.NewCalls.join_group_call`,
+    :meth:`~newcalls.NewCalls.leave_group_call`,
+    :meth:`~newcalls.NewCalls.change_volume_call`,
+    :meth:`~newcalls.NewCalls.change_stream`,
+    :meth:`~newcalls.NewCalls.pause_stream` and
+    :meth:`~newcalls.NewCalls.resume_stream`
     """
 
     def __init__(self):
@@ -116,9 +116,9 @@ class NodeJSNotRunning(Exception):
 
 class NoActiveGroupCall(Exception):
     """No active group call found, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.leave_group_call`,
-    :meth:`~pytgcalls.PyTgCalls.change_volume_call`,
+    :meth:`~newcalls.NewCalls.join_group_call`,
+    :meth:`~newcalls.NewCalls.leave_group_call`,
+    :meth:`~newcalls.NewCalls.change_volume_call`,
     """
 
     def __init__(self):
@@ -129,7 +129,7 @@ class NoActiveGroupCall(Exception):
 
 class NotInGroupCallError(Exception):
     """The userbot there isn't in a group call, raised by
-    :meth:`~pytgcalls.PyTgCalls.leave_group_call`
+    :meth:`~newcalls.NewCalls.leave_group_call`
     """
 
     def __init__(self):
@@ -140,7 +140,7 @@ class NotInGroupCallError(Exception):
 
 class AlreadyJoinedError(Exception):
     """Already joined into group call, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    :meth:`~newcalls.NewCalls.join_group_call`
     """
 
     def __init__(self):
@@ -152,7 +152,7 @@ class AlreadyJoinedError(Exception):
 class TelegramServerError(Exception):
     """Telegram Server is having some
     internal problems, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    :meth:`~newcalls.NewCalls.join_group_call`
     """
 
     def __init__(self):
@@ -162,20 +162,20 @@ class TelegramServerError(Exception):
         )
 
 
-class PyTgCallsAlreadyRunning(Exception):
-    """PyTgCalls client is already running, raised by
-    :meth:`~pytgcalls.PyTgCalls.start`,
+class NewCallsAlreadyRunning(Exception):
+    """NewCalls client is already running, raised by
+    :meth:`~newcalls.NewCalls.start`,
     """
 
     def __init__(self):
         super().__init__(
-            'PyTgCalls client is already running',
+            'NewCalls client is already running',
         )
 
 
 class TooManyCustomApiDecorators(Exception):
     """Too Many Custom Api Decorators, raised by
-    :meth:`~pytgcalls.CustomApi.on_update_custom_api`,
+    :meth:`~newcalls.CustomApi.on_update_custom_api`,
     """
 
     def __init__(self):
@@ -186,8 +186,8 @@ class TooManyCustomApiDecorators(Exception):
 
 class GroupCallNotFound(Exception):
     """Group call not found, raised by
-    :meth:`~pytgcalls.PyTgCalls.get_active_call`,
-    :meth:`~pytgcalls.PyTgCalls.get_call`
+    :meth:`~newcalls.NewCalls.get_active_call`,
+    :meth:`~newcalls.NewCalls.get_call`
     """
 
     def __init__(
@@ -201,7 +201,7 @@ class GroupCallNotFound(Exception):
 
 class InvalidMtProtoClient(Exception):
     """You set an invalid MtProto client, raised by
-    :meth:`~pytgcalls.PyTgCalls`
+    :meth:`~newcalls.NewCalls`
     """
 
     def __init__(self):
@@ -212,8 +212,8 @@ class InvalidMtProtoClient(Exception):
 
 class NoVideoSourceFound(Exception):
     """This error is raised when the stream does not have video streams
-    :meth:`~pytgcalls.PyTgCalls.join_group_call` or
-    :meth:`~pytgcalls.PyTgCalls.change_stream`
+    :meth:`~newcalls.NewCalls.join_group_call` or
+    :meth:`~newcalls.NewCalls.change_stream`
     """
 
     def __init__(self, path: str):
@@ -225,8 +225,8 @@ class NoVideoSourceFound(Exception):
 class InvalidVideoProportion(Exception):
     """FFmpeg have sent invalid video measure
     response, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call` or
-    :meth:`~pytgcalls.PyTgCalls.change_stream`
+    :meth:`~newcalls.NewCalls.join_group_call` or
+    :meth:`~newcalls.NewCalls.change_stream`
     """
 
     def __init__(self, message: str):
@@ -237,8 +237,8 @@ class InvalidVideoProportion(Exception):
 
 class NoAudioSourceFound(Exception):
     """This error is raised when the stream does not have audio streams
-    :meth:`~pytgcalls.PyTgCalls.join_group_call` or
-    :meth:`~pytgcalls.PyTgCalls.change_stream`
+    :meth:`~newcalls.NewCalls.join_group_call` or
+    :meth:`~newcalls.NewCalls.change_stream`
     """
 
     def __init__(self, path: str):
@@ -249,8 +249,8 @@ class NoAudioSourceFound(Exception):
 
 class FFmpegNotInstalled(Exception):
     """FFmpeg isn't installed, this error is raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call` or
-    :meth:`~pytgcalls.PyTgCalls.change_stream`
+    :meth:`~newcalls.NewCalls.join_group_call` or
+    :meth:`~newcalls.NewCalls.change_stream`
     """
 
     def __init__(self, path: str):
@@ -261,7 +261,7 @@ class FFmpegNotInstalled(Exception):
 
 class RTMPStreamNeeded(Exception):
     """Needed an RTMP Stream, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    :meth:`~newcalls.NewCalls.join_group_call`
     """
 
     def __init__(self):
@@ -272,7 +272,7 @@ class RTMPStreamNeeded(Exception):
 
 class UnMuteNeeded(Exception):
     """Needed to unmute the userbot, raised by
-    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    :meth:`~newcalls.NewCalls.join_group_call`
     """
 
     def __init__(self):

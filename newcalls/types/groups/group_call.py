@@ -1,4 +1,4 @@
-from pytgcalls.types.py_object import PyObject
+from newcalls.types.py_object import PyObject
 
 
 class GroupCall(PyObject):
@@ -16,7 +16,7 @@ class GroupCall(PyObject):
         chat_id (``int``):
             Unique identifier of chat.
         binary_status (``int``):
-            PyTgCalls API parameter.
+            NewCalls API parameter.
     """
 
     def __init__(

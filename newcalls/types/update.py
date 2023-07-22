@@ -1,4 +1,4 @@
-from pytgcalls.types.py_object import PyObject
+from newcalls.types.py_object import PyObject
 
 
 class Update(PyObject):

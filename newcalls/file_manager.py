@@ -11,7 +11,7 @@ from aiohttp import ClientSession
 
 from .types.input_stream.video_tools import check_support
 
-py_logger = logging.getLogger('pytgcalls')
+py_logger = logging.getLogger('newcalls')
 
 
 class FileManager:

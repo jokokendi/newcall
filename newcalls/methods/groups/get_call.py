@@ -24,18 +24,18 @@ class GetCall(Scaffold):
                 to get a non-existent group call
 
         Returns:
-            :obj:`~pytgcalls.types.GroupCall()`: On success,
+            :obj:`~newcalls.types.GroupCall()`: On success,
             the group call is returned.
 
         Example:
             .. code-block:: python
                 :emphasize-lines: 10-12
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
 
-                app = PyTgCalls(client1)
+                app = NewCalls(client1)
                 app.start()
 
                 ...  # Call API methods

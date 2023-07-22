@@ -1,6 +1,6 @@
 import asyncio
 
-from ...exceptions import PyTgCallsAlreadyRunning
+from ...exceptions import NewCallsAlreadyRunning
 from ...scaffold import Scaffold
 
 
@@ -11,15 +11,15 @@ class Start(Scaffold):
         This method start and then connects to the NodeJS core.
 
         Raises:
-            PyTgCallsAlreadyRunning: In case you try
+            NewCallsAlreadyRunning: In case you try
                 to start an already started client.
 
         Example:
             .. code-block:: python
                 :emphasize-lines: 5
 
-                from pytgcalls import Client
-                from pytgcalls import idle
+                from newcalls import Client
+                from newcalls import idle
                 ...
                 app = Client(client)
                 app.start()
@@ -37,4 +37,4 @@ class Start(Scaffold):
             self._handle_mtproto()
             await self._start_binding()
         else:
-            raise PyTgCallsAlreadyRunning()
+            raise NewCallsAlreadyRunning()

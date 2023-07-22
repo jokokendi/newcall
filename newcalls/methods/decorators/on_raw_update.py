@@ -15,10 +15,10 @@ class OnRawUpdate(Scaffold):
                 :emphasize-lines: 4-5
 
                 ...
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 ...
                 @app.on_raw_update()
-                async def handler(client: PyTgCalls, update: Update):
+                async def handler(client: NewCalls, update: Update):
                     print(update)
                 ...
                 app.run()

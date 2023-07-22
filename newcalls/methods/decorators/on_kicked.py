@@ -17,10 +17,10 @@ class OnKicked(Scaffold):
                 :emphasize-lines: 4-5
 
                 ...
-                app = PyTgCalls(client)
+                app = NewCalls(client)
                 ...
                 @app.on_kicked()
-                async def handler(client: PyTgCalls, chat_id: int):
+                async def handler(client: NewCalls, chat_id: int):
                     print(chat_id)
                 ...
                 app.run()

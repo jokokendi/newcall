@@ -9,13 +9,13 @@ class UpdatedGroupCallParticipant(Update):
     Attributes:
         chat_id (``int``):
             Unique identifier of chat.
-        participant (:obj:`~pytgcalls.types.GroupCallParticipant()`):
+        participant (:obj:`~newcalls.types.GroupCallParticipant()`):
             Info about a group call participant
 
     Parameters:
         chat_id (``int``):
             Unique identifier of chat.
-        participant (:obj:`~pytgcalls.types.GroupCallParticipant()`):
+        participant (:obj:`~newcalls.types.GroupCallParticipant()`):
             Info about a group call participant
     """
 

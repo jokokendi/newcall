@@ -10,7 +10,7 @@ from ..types.groups import GroupCallParticipant
 from ..types.participant_list import ParticipantList
 from .bridged_client import BridgedClient
 
-py_logger = logging.getLogger('pytgcalls')
+py_logger = logging.getLogger('newcalls')
 
 
 class ClientCache:

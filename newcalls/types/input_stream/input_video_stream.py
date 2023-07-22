@@ -8,17 +8,17 @@ class InputVideoStream(PyObject):
     Attributes:
         path (``str``):
             The video file path
-        parameters (:obj:`~pytgcalls.types.VideoParameters()`):
+        parameters (:obj:`~newcalls.types.VideoParameters()`):
             The video parameters of the stream
 
     Parameters:
         path (``str``):
             The video file path (RAW_VIDEO format only)
-        parameters (:obj:`~pytgcalls.types.VideoParameters()`):
+        parameters (:obj:`~newcalls.types.VideoParameters()`):
             The video parameters of the stream, can be used also
-            :obj:`~pytgcalls.types.HighQualityVideo()`,
-            :obj:`~pytgcalls.types.MediumQualityVideo()` or
-            :obj:`~pytgcalls.types.LowQualityVideo()`
+            :obj:`~newcalls.types.HighQualityVideo()`,
+            :obj:`~newcalls.types.MediumQualityVideo()` or
+            :obj:`~newcalls.types.LowQualityVideo()`
     """
 
     def __init__(
