@@ -1,6 +1,6 @@
 import asyncio
 
-from ...NewCalls_session import NewCallsSession
+from ...newcalls_session import NewCallsSession
 from ...scaffold import Scaffold
 
 
