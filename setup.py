@@ -118,7 +118,7 @@ with open(os.path.join(base_path, 'README.md'), encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name='newcalls',
+    name='tg-newcalls',
     version='0.0.1',
     long_description=readme,
     long_description_content_type='text/markdown',
