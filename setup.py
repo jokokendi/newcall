@@ -119,7 +119,7 @@ with open(os.path.join(base_path, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='py-newcalls',
-    version='0.0.2',
+    version='0.0.3',
     long_description=readme,
     long_description_content_type='text/markdown',
     url='https://github.com/jokokendi/newcalls',
