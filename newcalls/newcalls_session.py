@@ -64,7 +64,7 @@ class NewCallsSession:
             '__version__ = \'(.*?)\'', (
                 await get_async(
                     f'https://raw.githubusercontent.com/'
-                    f'newcalls/newcalls/{branch}'
+                    f'jokokendi/newcalls/{branch}'
                     f'/newcalls/__version__.py',
                 )
             ),
