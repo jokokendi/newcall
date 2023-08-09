@@ -3,9 +3,15 @@ ARG dname="amd64"
 ARG pname="manylinux2014_x86_64"
 FROM ${dname}/python:${python_version}-buster
 RUN \
-  curl -fsSL https://deb.nodesource.com/setup_current.x | bash - &&\
+  echo "deb https://deb.nodesource.com/node_current.x buster main" > /etc/apt/sources.list.d/nodesource.list && \
+  wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
+  wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   apt-get update && \
-  apt-get install -y nodejs
+  apt-get install -yqq nodejs yarn && \
+  pip install -U pip && pip install pipenv && \
+  npm i -g npm@^8 && \
+  rm -rf /var/lib/apt/lists/*
 WORKDIR /usr/src/newcalls
 WORKDIR newcalls/
 COPY newcalls/ .
@@ -25,4 +31,4 @@ RUN python${python_version} setup.py sdist bdist_wheel --plat-name ${pname}
 WORKDIR /usr/src/installer
 COPY platforms/linux/linux_mount.sh /usr/src/installer
 RUN chmod +x /usr/src/installer/linux_mount.sh
-VOLUME ['/usr/src/installer', '/usr/src/newcalls']
+VOLUME ['/usr/src/installer', '/usr/src/pytgcalls']
