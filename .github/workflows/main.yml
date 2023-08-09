@@ -28,6 +28,13 @@ jobs:
             arch-run-names: 'linux/amd64'
             build-plat-names: 'manylinux2014_x86_64'
 
+          - arch-image-names: 'arm64v8'
+            arch-run-names: 'linux/arm64/v8'
+            build-plat-names: 'manylinux2014_aarch64'
+
+          - arch-image-names: 'arm32v7'
+            arch-run-names: 'linux/arm32/v7'
+            build-plat-names: 'manylinux2014_armv7l'
         python-version: [ '3.7' ]
     steps:
       - name: Get Branch Name
