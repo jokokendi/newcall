@@ -35,7 +35,7 @@ jobs:
           - arch-image-names: 'arm32v7'
             arch-run-names: 'linux/arm32/v7'
             build-plat-names: 'manylinux2014_armv7l'
-        python-version: [ '3.7', '3.8', '3.9', '3.10' ]
+        python-version: [ '3.7' ]
     steps:
       - name: Get Branch Name
         run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
