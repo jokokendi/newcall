@@ -1,6 +1,6 @@
 ARG python_version="3.6"
 ARG dname="amd64"
-ARG pname="manylinux2014_x86_65"
+ARG pname="manylinux2014_x86_64"
 FROM ${dname}/python:${python_version}-buster
 RUN \
   curl -fsSL https://deb.nodesource.com/setup_current.x | bash - &&\

@@ -26,7 +26,7 @@ jobs:
         include:
           - arch-image-names: 'amd64'
             arch-run-names: 'linux/amd64'
-            build-plat-names: 'manylinux2014_x86_65'
+            build-plat-names: 'manylinux2014_x86_64'
 
           - arch-image-names: 'arm64v8'
             arch-run-names: 'linux/arm64/v8'
