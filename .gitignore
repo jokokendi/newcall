@@ -10,4 +10,3 @@ build/
 node_modules/
 venv/
 tests/
-env/
