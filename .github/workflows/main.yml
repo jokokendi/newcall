@@ -57,10 +57,10 @@ jobs:
           sudo systemctl restart docker
       - name: Build Docker Image
         run: |
-          docker buildx build --load --build-arg pname="${{ matrix.build-plat-names }}" --build-arg dname="${{ matrix.arch-image-names }}" --build-arg python_version="${{ matrix.python-version }}" --platform "${{ matrix.arch-run-names }}" -t newcalls_x"${{ matrix.python-version }}":"${{ matrix.arch-image-names }}" . -f platforms/linux/Dockerfile
+          docker buildx build --load --build-arg pname="${{ matrix.build-plat-names }}" --build-arg dname="${{ matrix.arch-image-names }}" --build-arg python_version="${{ matrix.python-version }}" --platform "${{ matrix.arch-run-names }}" -t newcalls_p"${{ matrix.python-version }}":"${{ matrix.arch-image-names }}" . -f platforms/linux/Dockerfile
       - name: Run Docker Container
         run: |
-          docker run --platform "${{ matrix.arch-run-names }}" -v "$PWD":/usr/src/mnt newcalls_x"${{ matrix.python-version }}":"${{ matrix.arch-image-names }}" ./linux_mount.sh
+          docker run --platform "${{ matrix.arch-run-names }}" -v "$PWD":/usr/src/mnt newcalls_p"${{ matrix.python-version }}":"${{ matrix.arch-image-names }}" ./linux_mount.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

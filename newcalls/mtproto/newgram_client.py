@@ -52,7 +52,7 @@ class NewgramClient(BridgedClient):
         if VersionManager.version_tuple(
             newgram.__version__,
         ) > VersionManager.version_tuple(
-            '0.0.0',
+            '0.0.2',
         ):
             self._app.send = self._app.invoke
         self._handler: Dict[str, Callable] = {}
