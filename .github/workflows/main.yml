@@ -1,6 +1,6 @@
 # This is the workflow to make and push wheels to PyPi
 
-name: Build Wheels
+name: tg-newcalls
 on:
   push:
     branches: [ master ]
